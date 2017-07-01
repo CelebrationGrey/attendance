@@ -1,5 +1,6 @@
 require('./check-versions')()
 
+var apiRouters = require('./mock-server')
 var config = require('../config')
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
@@ -89,3 +90,6 @@ module.exports = {
     server.close()
   }
 }
+
+// mock
+app.use('/api', apiRouters)

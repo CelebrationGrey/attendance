@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>修改密码</title>
+  <link rel="icon" href="../imgs/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="./static/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><span>学生考勤系统</span></a>
+      <ul class="user-menu">
+        <li class="dropdown pull-right">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>-->
+            <!--<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>-->
+            <li><a id="logout" href="javascript:;"><span class="glyphicon glyphicon-log-out"></span>登出</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div id="sidebar-collapse" class="col-sm-4 col-lg-3 sidebar">
+  <ul class="nav menu">
+    <li class="active"><a href="modifyacount.html"><span class="glyphicon glyphicon-lock"></span>管理业务账号</a></li>
+    <li><a href="modifyuser.html"><span class="glyphicon glyphicon-user"></span>管理普通用户的信息</a></li>
+    <li><a href="modifyad.html"><span class="glyphicon glyphicon-list-alt"></span>管理广告信息</a></li>
+    <li><a href="modifyclass.html"><span class="glyphicon glyphicon-tag"></span>管理三级分类信息（元数据）</a></li>
+  </ul>
+</div><!--/.sidebar-->
+
+<div class="col-sm-8 col-sm-offset-4 col-lg-9 col-lg-offset-3 main">
+  <div class="row">
+    <ol class="breadcrumb">
+      <li><a href="#"><span class="glyphicon glyphicon-lock"></span></a></li>
+      <li class="active">修改密码</li>
+    </ol>
+  </div><!--/.row-->
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="page-header">修改密码</h1>
+    </div>
+  </div><!--/.row-->
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel">
+        <div class="panel-body">
+          <form action="" class="form-horizontal">
+            <div id="oldPasswordGroup" class="form-group">
+              <label class="col-lg-2 control-label">旧密码</label>
+              <div class="col-lg-6">
+                <input id="oldPassword" type="password" name="oldpassword" class="form-control">
+              </div>
+            </div>
+            <p class="text-center text-danger" id="oldPasswordAlert" style="display: none"></p>
+            <div id="newPasswordGroup1" class="form-group">
+              <label class="col-lg-2 control-label">新密码</label>
+              <div class="col-lg-6">
+                <input id="newPassword1" type="password" name="newpassword1" class="form-control">
+              </div>
+            </div>
+            <p class="text-center text-danger" id="newPassword1Alert" style="display: none"></p>
+            <div id="newPasswordGroup2" class="form-group">
+              <label class="col-lg-2 control-label">再次输入新密码</label>
+              <div class="col-lg-6">
+                <input id="newPassword2" type="password" name="newpassword2" class="form-control">
+              </div>
+            </div>
+            <p class="text-center text-danger" id="newPassword2Alert" style="display: none"></p>
+          </form>
+        </div>
+        <div class="panel-footer">
+          <div class="row">
+            <div class="col-lg-1 col-lg-push-2">
+              <button class="btn btn-primary">修改</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--/.col-->
+  </div><!--/.row-->
+</div>  <!--/.main-->
+<script type="text/javascript" src="./static/jquery/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="./static/bootstrap/js/bootstrap.min.js"></script>
+<!-- built files will be auto injected -->
+</body>
+</html>

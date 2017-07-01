@@ -38,6 +38,11 @@ module.exports = {
         include: [resolve('src'), resolve('test')]
       },
       {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+        include: [resolve('src'), resolve('test')]
+      },
+      {
         test: /\.less$/,
         use: ['style-loader', 'css-loader', 'less-loader'],
         include: [resolve('src'), resolve('test')]

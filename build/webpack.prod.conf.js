@@ -110,7 +110,7 @@ if (config.build.bundleAnalyzerReport) {
   webpackConfig.plugins.push(new BundleAnalyzerPlugin())
 }
 
-var pages = utils.getEntries('./src/module/**/*.html')
+var pages = utils.getEntries('./src/module/*.html')
 
 for(var page in pages) {
   var conf = {

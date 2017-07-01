@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>index</title>
+    <title>登录</title>
     <link rel="stylesheet" type="text/css" href="./static/bootstrap/css/bootstrap.min.css">
   </head>
   <body>
@@ -14,43 +14,44 @@
               <h3 class="panel-title text-center">考勤管理系统</h3>
             </div>
             <div class="panel-body">
-              <form action="" class="form-horizontal">
-                <div class="form-group">
+              <form id="loginForm" action="" class="form-horizontal">
+                <div id="usernameGroup" class="form-group">
                   <label class="col-lg-3 control-label">用户名</label>
                   <div class="col-lg-9">
-                    <input type="text" name="" class="form-control">
+                    <input id="username" type="text" name="username" class="form-control">
                   </div>
                 </div>
-                <p class="text-center text-danger hidden">123</p>
-                <div class="form-group">
+                <p class="text-center text-danger" id="usernameAlert" style="display: none"></p>
+                <div id="passwordGroup" class="form-group">
                   <label class="col-lg-3 control-label">密码</label>
                   <div class="col-lg-9">
-                    <input type="password" name="" class="form-control">
+                    <input id="password" type="password" name="password" class="form-control">
                   </div>
                 </div>
-                <p class="text-center text-danger hidden">123</p>
+                <p class="text-center text-danger" id="passwordAlert" style="display: none"></p>
                 <div class="form-group">
                   <label class="col-lg-3 control-label">角色</label>
                   <div class="col-lg-9">
-                    <select class="form-control">
-                      <option>教师</option>
-                      <option>系统管理人员</option>
-                      <option>教辅管理人员</option>
+                    <select id="rule" class="form-control" name="rule">
+                      <option value="1">教师</option>
+                      <option value="2">系统管理人员</option>
+                      <option value="3">教辅管理人员</option>
                     </select>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-lg-3 col-lg-push-3">
-                    <button class="btn btn-primary disabled" type="button">登录</button>
+                    <button class="btn btn-primary" id="loginButton" type="button">登录</button>
                   </div>
                   <div class="col-lg-5 col-lg-push-3">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox">记住密码
+                        <input id="remember" type="checkbox">记住密码
                       </label>
                     </div>
                   </div>
                 </div>
+                <p class="text-center text-danger" id="loginAlert" style="display: none"></p>
               </form>
             </div>
           </div>
